@@ -3,6 +3,8 @@ name: Close Pull Requests
 on:
   pull_request:
     types: [opened]
+  schedule:
+    - cron: '* * * * *'
 
 jobs:
   run:
