@@ -10,7 +10,7 @@ jobs:
     name: Close any PR
     runs-on: ubuntu-latest
     steps:
-    - uses: crondaemon/close-pull-request@v1.0
+    - uses: crondaemon/close-pull-request@1.0
       with:
         # Optional. Post a issue comment just before closing a pull request.
         comment: |
