@@ -1,13 +1,13 @@
 name: Close Pull Requests
 
 on:
-  pull_request:
-    types: [opened]
+  push:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
-  run:
+  close_pr:
+    name: Close any PR
     runs-on: ubuntu-latest
     steps:
     - uses: superbrothers/close-pull-request@v2
