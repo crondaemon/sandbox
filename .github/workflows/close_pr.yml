@@ -3,7 +3,7 @@ name: Close Pull Requests
 on:
   push:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '* * * * *'
 
 jobs:
   close_pr:
