@@ -3,22 +3,18 @@ name: Close Pull Requests
 on:
   push:
   schedule:
-    - cron: '* * * * *'
+    - cron: '0 * * * *'
 
 jobs:
   close_pr:
-    name: Close any PR
+    name: Close PRs
     runs-on: ubuntu-latest
     steps:
-    - uses: crondaemon/close-pull-request@v1
+    - uses: crondaemon/close-pr@v1
       with:
         # Optional. Post a issue comment just before closing a pull request.
         comment: |
           Hi, thank you for your contribution!
-          Github is however not the right place for these, please have a look at
-
-          https://www.wireshark.org/docs/wsdg_html_chunked/ChSrcContribute.html
-
-          for further instructions.
+          Github is however not the right place for these.
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
